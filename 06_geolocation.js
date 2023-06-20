@@ -13,7 +13,6 @@ a)	Implement a JavaScript function that retrieves the user's current
 
 "use strict"
 
-
 const x = document.getElementById("myDiv");
 function getLocation() {
     if (navigator.geolocation) {

@@ -15,8 +15,8 @@ b.	Implement the function to display the square root of the sum of squares for a
 */
 
 "use strict"
-const numbersArray = [1, 2];
 
+// the square root of the sum of squares of all the numbers function
 function calculateSquareRootOfSumOfSquares(arr) {
     const squaredArray = arr.map(element => {
         return Math.pow(element, 2);  // make square of a given number
@@ -31,22 +31,9 @@ function calculateSquareRootOfSumOfSquares(arr) {
 }
 
 
-function displaySquareRootSumOfSquaresArray() {
-    const numbersArray = [1, 2, 3, 4, 5];
-    const squaredArray = numbersArray.map(element => {
-        return Math.pow(element, 2);  // make square of a given number
-    });
-    let sumOfSquaredArray = 0;
-    for (let i = 0; i < squaredArray.length; i++) {
-        sumOfSquaredArray += squaredArray[i];
-    }
-    const squareRoot = Math.sqrt(sumOfSquaredArray);
-    document.getElementById("myDiv").innerHTML = squareRoot;
-}
-
+// display the square root of the sum of squares for an array of numbers.
+const numbersArray = [1, 2, 3, 4]; // the number array 
 let result = calculateSquareRootOfSumOfSquares(numbersArray);;
 if (result !== null) {
     document.getElementById("myDiv").innerHTML = result;
 }
-
-displaySquareRootSumOfSquaresArray(); // Calling the second function

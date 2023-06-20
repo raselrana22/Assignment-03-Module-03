@@ -15,7 +15,9 @@ c)	When the user moves the mouse over an image, change the image source
     to another image of your choice.
 */
 
-// click listener 
+"use strict"
+
+// click listener
 document.addEventListener("click", handleClick);
 
 function handleClick(event) {

@@ -14,6 +14,7 @@ b)	Implement the function to display the user's browser name and version.
 
 "use strict"
 
+//the user's browser name and version finding function
 function getBrowserInfo() {
     const browser = {};
     const userAgent = navigator.userAgent;
@@ -38,51 +39,11 @@ function getBrowserInfo() {
         browser.name = "Unknown";
         browser.version = "Unknown";
     }
-
     return browser;
 }
+
 
 const browserInfo = getBrowserInfo();
-console.log("Browser Name:", browserInfo.name);
-console.log("Browser Version:", browserInfo.version);
-
-
-
-
-
-function displayBrowserInfo() {
-    const browser = {};
-    const userAgent = navigator.userAgent;
-
-    // Check for Firefox
-    if (userAgent.indexOf("Firefox") !== -1) {
-        browser.name = "Mozilla Firefox";
-        browser.version = userAgent.split("Firefox/")[1];
-    }
-    // Check for Chrome
-    else if (userAgent.indexOf("Chrome") !== -1) {
-        browser.name = "Google Chrome";
-        browser.version = userAgent.split("Chrome/")[1].split(" ")[0];
-    }
-    // Check for Edge
-    else if (userAgent.indexOf("Edge") !== -1) {
-        browser.name = "Microsoft Edge";
-        browser.version = userAgent.split("Edge/")[1].split(" ")[0];
-    }
-    // Unknown browser
-    else {
-        browser.name = "Unknown";
-        browser.version = "Unknown";
-    }
-
-    return browser;
-
-
-    const browserName = browser.name;
-    const browserVersion = browser.version;
-
-    const message = `Browser Name: ${browserName}\nBrowser Version: ${browserVersion}`;
-    console.log(message);
-}
-
-displayBrowserInfo();
+document.getElementById("myDiv").innerHTML =
+    `Browser Name: ${browserInfo.name} <br/> 
+    Browser Version: ${browserInfo.version}`

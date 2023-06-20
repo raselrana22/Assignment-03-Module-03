@@ -29,33 +29,8 @@ function isPrime(n) {
 }
 
 
-
-function primeNumberCheck(n) {
-    if (n < 2) {
-        return false;
-    }
-    let sqrtN = Math.sqrt(n);
-    for (let i = 2; i <= sqrtN; i++) {
-        if (n % i === 0) {
-            return false;
-        }
-    }
-    return true;
-}
-
-
-const inputNumber = prompt();  // user input receive 
-if (inputNumber <= 0) {
-    console.error("Invalid number");
-} else {
-    let result = isPrime(inputNumber);
-    document.getElementById("myDiv").textContent =
-        `Is ${inputNumber} prime? ${result}`;
-}
-
-
-const number = 7; // The given positive integer number
-const result = primeNumberCheck(number);
+const number = 17; // The given positive integer number
+const result = isPrime(number);
 if (result == true) {
     document.getElementById("myDiv").innerHTML =
         `${number} is a prime number !`
@@ -63,3 +38,15 @@ if (result == true) {
     document.getElementById("myDiv").innerHTML =
         `${number} is not a prime number !`
 }
+
+
+// // This function for collect the data from user dynamically
+// const inputNumber = prompt();  // user input receive
+// if (inputNumber <= 0) {
+//     console.error("Invalid number");
+// } else {
+//     let result = isPrime(inputNumber);
+//     document.getElementById("myDiv").textContent =
+//         `Is ${inputNumber} prime? ${result}`;
+// }
+

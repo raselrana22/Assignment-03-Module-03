@@ -23,22 +23,7 @@ function openNewWindow(url, width, height) {
     }
 }
 
-function openWindowByUrl(url, dimensions) {
-    const newWindow = window.open(url, dimensions);
-    if (newWindow) {
-        document.write("Hello Ostad Team");
-    }
-}
-
-const url = "https://www.ostad.com";  // put your url here
-const width = 600;
-const height = 400;
+const url = "https://www.example.com";  // put your url here
+const width = 800;
+const height = 600;
 openNewWindow(url, width, height);
-
-
-const urlGiven = "https://www.example.com";  // put your url here
-const widthGiven = 800;
-const heightGiven = 600;
-const dimensions = `"width=${widthGiven}, "height=${heightGiven}"`
-openWindowByUrl(urlGiven, dimensions);
-
